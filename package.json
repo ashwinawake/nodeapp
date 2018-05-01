@@ -1,0 +1,16 @@
+{
+  "name": "notes-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashwin",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "robotjs": "^0.5.1",
+    "yargs": "^11.0.0"
+  }
+}
