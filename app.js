@@ -26,7 +26,12 @@ console.log('Yargs', argv);
  } else if (command === 'list') {
    notes.getAll();
  } else if (command === 'read'){
-   notes.getNote(argv.title);
+  var note = notes.getNote(argv.title);
+  if (note) {
+    console.log('Fetching note: ' + note.title);
+  } else {
+    console.log('No note found');
+  }
  } else if (command === 'remove'){
   var noteRemoved = notes.removeNote(argv.title);
   var message = noteRemoved ? 'Note was removed' : 'Note not found';
