@@ -17,9 +17,7 @@ console.log('Yargs', argv);
    console.log("note: " + note);
    if (note) {
      console.log('Note created');
-     console.log('--');
-     console.log(`Title : ${note.title}`);
-     console.log(`Body : ${note.body}`);
+     notes.logNote(note);
    } else {
      console.log('Note title taken');
    }
@@ -29,6 +27,7 @@ console.log('Yargs', argv);
   var note = notes.getNote(argv.title);
   if (note) {
     console.log('Fetching note: ' + note.title);
+    notes.logNote(note);
   } else {
     console.log('No note found');
   }
